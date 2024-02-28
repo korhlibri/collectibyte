@@ -1,0 +1,13 @@
+.text-primary {
+    color: #5960f3 !important;
+    
+}
+.bg-primary {
+    background-color: #5960f3 !important;
+}
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
