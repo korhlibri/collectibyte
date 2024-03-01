@@ -18,7 +18,7 @@
 
         <link href="<?php echo $ref?>assets/css/style.css" rel="stylesheet">
     </head>
-    <body class="bg-dark">
+    <body class="bg-dark d-flex flex-column min-vh-100">
         <?php
             require_once("header.php");
         ?>
@@ -30,6 +30,10 @@
                 include_once "$ref/modules/".$_REQUEST["view"].".php";
             else
                 echo '<script type="text/javascript">window.location.replace("./home");</script>';
+        ?>
+
+        <?php
+            require_once("footer.php");
         ?>
     </body>
 </html>
