@@ -22,15 +22,14 @@
         <?php
             require_once("header.php");
         ?>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
-        <h1 class="text-light">Hello World<br><br><br></h1>
+
+        <?php
+            if ($_REQUEST["view"] == "")
+                echo '<script type="text/javascript">window.location.replace("./home");</script>';
+            else if (file_exists("$ref/modules/".$_REQUEST["view"].".php"))
+                include_once "$ref/modules/".$_REQUEST["view"].".php";
+            else
+                echo '<script type="text/javascript">window.location.replace("./home");</script>';
+        ?>
     </body>
 </html>
