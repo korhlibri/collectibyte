@@ -1,6 +1,6 @@
 <footer class="bg-primary position-relative mt-auto">
     <div class="container">
-        <div class="row align-items-center mt-4 mb-4">
+        <div class="row align-items-center mt-5 mb-5">
             <div class="col-12 col-md-4">
                 <a class="navbar-brand logo text-light" href="home">
                     <h1>Collecti<span class="fw-bold">Byte</span></h1>
