@@ -9,6 +9,14 @@ header {
     
 }
 
+a {
+    color: white !important;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.664);
+}
+
 .bg-primary {
     background-color: #5960f3 !important;
 }
