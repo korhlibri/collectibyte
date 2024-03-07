@@ -24,12 +24,15 @@
         ?>
 
         <?php
-            if ($_REQUEST["view"] == "")
+            if ($_REQUEST["view"] == "") {
                 echo '<script type="text/javascript">window.location.replace("./home");</script>';
-            else if (file_exists("$ref/modules/".$_REQUEST["view"].".php"))
+            }
+            else if (file_exists("$ref/modules/".$_REQUEST["view"].".php")) {
                 include_once "$ref/modules/".$_REQUEST["view"].".php";
-            else
-                echo '<script type="text/javascript">window.location.replace("./home");</script>';
+            }
+            else {
+                echo '<script type="text/javascript">window.location.replace("./404");</script>';
+            }
         ?>
 
         <?php

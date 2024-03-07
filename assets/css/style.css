@@ -21,6 +21,27 @@ a:hover {
     background-color: #5960f3 !important;
 }
 
+.bg-light {
+    background-color: #424242 !important;
+}
+
+.border-dark {
+    border-color: rgb(47, 47, 47) !important;
+}
+
+.bg-lighter {
+    background-color: #757575 !important;
+}
+
+.btn-primary {
+    background-color: #5960f3 !important;
+    border-color: #3e43a4 !important;
+}
+
+.btn-primary:hover {
+    background-color: #777def !important;
+}
+
 .home-image {
     width: 500px;
     height: 250px;
