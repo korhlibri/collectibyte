@@ -1,7 +1,7 @@
-<header>
-    <nav class="navbar navbar-expand-lg bg-primary">
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-primary z-3">
         <div class="container-fluid">
-            <a class="navbar-brand logo text-light ms-5 mt-2 mb-2" href="home">
+            <a class="navbar-brand logo text-light ps-5 pt-2 pb-2" href="home">
                 <h2>Collecti<span class="fw-bold">Byte</span></h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

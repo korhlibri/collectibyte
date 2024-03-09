@@ -18,7 +18,7 @@
 
         <link href="<?php echo $ref?>assets/css/style.css" rel="stylesheet">
     </head>
-    <body class="bg-dark d-flex flex-column min-vh-100">
+    <body class="bg-dark d-flex flex-column">
         <?php
             require_once("header.php");
         ?>

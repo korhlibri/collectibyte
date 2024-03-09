@@ -9,13 +9,25 @@
             </div>
             <div class="col-md-8 col-12 ms-auto me-auto">
                 <div class="row">
-                    <div class="col-12 mb-3">
+                    <div class="col-md-6 col-12 mb-3">
                         <div class="card border-dark">
                             <div class="card-header bg-lighter">
                                 Category
                             </div>
                             <div class="card-body bg-light">
-                                <h2 class="card-title">My Article</h2>
+                                <h2 class="card-title">My Item</h2>
+                                <p class="card-text">Hello there!</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3">
+                        <div class="card border-dark">
+                            <div class="card-header bg-lighter">
+                                Category
+                            </div>
+                            <div class="card-body bg-light">
+                                <h2 class="card-title">My Item</h2>
                                 <p class="card-text">Hello there!</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
@@ -23,13 +35,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 mb-3">
+                    <div class="col-md-6 col-12 mb-3">
                         <div class="card border-dark">
                             <div class="card-header bg-lighter">
                                 Category
                             </div>
                             <div class="card-body bg-light">
-                                <h2 class="card-title">My Article</h2>
+                                <h2 class="card-title">My Item</h2>
+                                <p class="card-text">Hello there!</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3">
+                        <div class="card border-dark">
+                            <div class="card-header bg-lighter">
+                                Category
+                            </div>
+                            <div class="card-body bg-light">
+                                <h2 class="card-title">My Item</h2>
                                 <p class="card-text">Hello there!</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
