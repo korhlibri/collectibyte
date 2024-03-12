@@ -1,4 +1,4 @@
-<header class="sticky-top">
+<header class="fixed-top">
     <nav class="navbar navbar-expand-lg bg-primary z-3">
         <div class="container-fluid">
             <a class="navbar-brand logo text-light ps-5 pt-2 pb-2" href="home">
@@ -21,3 +21,7 @@
         </div>
     </nav>
 </header>
+
+<!-- fixed-top property in header does not take up space, therefore the header gets rendered directly on top of other elements -->
+<!-- this is to ensure that the header always takes up enough space by itself, in order to avoid that scenario -->
+<img class="pt-5 pb-2">

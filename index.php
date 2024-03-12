@@ -23,7 +23,7 @@
         <?php
             require_once("header.php");
         ?>
-
+        
         <?php
             if ($_REQUEST["view"] == "") {
                 echo '<script type="text/javascript">window.location.replace("./home");</script>';

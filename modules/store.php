@@ -1,4 +1,4 @@
-<section id="vue-app-blog" class="mt-5 mb-5">
+<section id="vue-app-store" class="mt-5 mb-5">
     <div class="container text-light">
         <div class="row ms-auto me-auto">
             <div class="col-md-4 col-12 ms-auto me-auto mb-3">

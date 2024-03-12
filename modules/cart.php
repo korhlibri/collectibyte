@@ -1,4 +1,4 @@
-<section>
+<section id="vue-app-cart" class="mt-5 mb-5">
     <div class="container text-light">
         <div class="col-12">
             <div class="row table-responsive">
@@ -45,7 +45,7 @@
                     <h3>Total: $0.0</h3>
                 </div>
                 <div class="col-md-6 col-12">
-                    <button class="btn btn-primary"><h3>Continue to Checkout</h3></button>
+                    <a href="checkout"><button class="btn btn-primary"><h3>Continue to Checkout</h3></button></a>
                 </div>
             </div>
         </div>
