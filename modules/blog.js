@@ -1,3 +1,4 @@
-window.onload = function() {
-    console.log("javascript loaded succesfully");
+window.onload = async function() {
+    let response = await axios.get("./api/articles");
+    console.log(response);
 }
