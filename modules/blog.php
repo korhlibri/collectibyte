@@ -40,3 +40,5 @@
         </div>
     </div>
 </section>
+
+<script src="<?php echo $ref;?>modules/blog.js"></script>
