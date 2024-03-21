@@ -20,28 +20,27 @@
     ]);
 
     $router->map("GET", $entity."/api/articles", function() {
-        http_response_code(500);
-        $data["status"] = "error";
-        $data["code"] = "hello";
-        $data["data"] = "this is a test";
-        // $returned = $database->select(
-        //     "articles",
-        //     "*"
-        // );
+        global $database;
+        $data;
 
-        // $error_info = $database->error();
-        // if($error_info[2]){
-        //     http_response_code(500);
-        //     $data["status"] = "error";
-        //     $data["code"] = $error_info[1];
-        //     $data["data"] = $error_info[2];
-        // }
-        // else{
-        //     http_response_code(500);
-        //     $data["status"] = "error";
-        //     $data["code"] = $error_info[1];
-        //     $data["data"] = $error_info[2];
-        // }
+        $returned = $database->select(
+            "articles",
+            "*"
+        );
+
+        $error_info = $database->error;
+        if($error_info){
+            http_response_code(500);
+            $data["status"] = "error";
+            $data["message"] = "There was a server error";
+            $data["data"] = $error_info;
+        }
+        else{
+            http_response_code(200);
+            $data["status"] = "success";
+            $data["message"] = "The data was gathered successfully";
+            $data["data"] = $returned;
+        }
         print_r(json_encode($data));
     }, "get_all_articles");
 
