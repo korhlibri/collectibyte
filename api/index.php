@@ -43,6 +43,30 @@
         }
         print_r(json_encode($data));
     }, "get_all_articles");
+    $router->map("GET", $entity."/api/products", function() {
+        global $database;
+        $data;
+
+        $returned = $database->select(
+            "products",
+            "*"
+        );
+
+        $error_info = $database->error;
+        if($error_info){
+            http_response_code(500);
+            $data["status"] = "error";
+            $data["message"] = "There was a server error";
+            $data["data"] = $error_info;
+        }
+        else{
+            http_response_code(200);
+            $data["status"] = "success";
+            $data["message"] = "The data was gathered successfully";
+            $data["data"] = $returned;
+        }
+        print_r(json_encode($data));
+    }, "get_all_products");
 
     $match = $router->match();
 

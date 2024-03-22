@@ -9,7 +9,19 @@
             </div>
             <div class="col-md-8 col-12 ms-auto me-auto">
                 <div class="row">
-                    <div class="col-md-6 col-12 mb-3">
+                    <div class="col-md-6 col-12 mb-3" v-for="product in products">
+                        <div class="card border-dark">
+                            <div class="card-header bg-lighter">
+                                ${{ product.price }}
+                            </div>
+                            <div class="card-body bg-light">
+                                <h2 class="card-title">{{ product.title }}</h2>
+                                <p class="card-text">{{ product.description }}</p>
+                                <a href="#" class="btn btn-primary">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 col-12 mb-3">
                         <div class="card border-dark">
                             <div class="card-header bg-lighter">
                                 Category
@@ -33,8 +45,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-md-6 col-12 mb-3">
                         <div class="card border-dark">
                             <div class="card-header bg-lighter">
@@ -46,21 +56,11 @@
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-12 mb-3">
-                        <div class="card border-dark">
-                            <div class="card-header bg-lighter">
-                                Category
-                            </div>
-                            <div class="card-body bg-light">
-                                <h2 class="card-title">My Item</h2>
-                                <p class="card-text">Hello there!</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script src="<?php echo $ref;?>modules/store.js"></script>

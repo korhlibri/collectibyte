@@ -7,13 +7,13 @@ let app = createApp({
         }
     },
     mounted: async function(){
-        this.get_all_articulos();
+        this.get_all_articles();
     },
     methods: {
-        get_all_articulos: async function(){
+        get_all_articles: async function(){
             let response = await axios.get("api/articles");
             this.articles = response.data.data;
-            console.log(this.articles);
+            // console.log(this.articles);
         },
     },
 }).mount('#vue-app-blog');
