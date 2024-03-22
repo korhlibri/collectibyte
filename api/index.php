@@ -1,6 +1,8 @@
 <?php
     $entity = "/collectibyte";
 
+    error_reporting(0);
+
     require_once '../vendor/autoload.php';
     $router = new AltoRouter();
     // use Medoo\Medoo;
@@ -22,11 +24,30 @@
     $router->map("GET", $entity."/api/articles", function() {
         global $database;
         $data;
+        $returned;
 
-        $returned = $database->select(
-            "articles",
-            "*"
-        );
+        $filter_category = $_REQUEST["category"];
+
+        if($filter_category){
+            $returned = $database->select(
+                "articles",
+                [
+                    "[><]article_categories" => ["id_category" => "id"]
+                ],
+                "*",
+                [
+                    "article_categories.category" => $filter_category
+                ]
+            );
+        }else{
+            $returned = $database->select(
+                "articles",
+                [
+                    "[><]article_categories" => ["id_category" => "id"]
+                ],
+                "*"
+            );
+        }
 
         $error_info = $database->error;
         if($error_info){
@@ -43,12 +64,57 @@
         }
         print_r(json_encode($data));
     }, "get_all_articles");
+
     $router->map("GET", $entity."/api/products", function() {
+        global $database;
+        $data;
+        $returned;
+
+        $filter_category = $_REQUEST["category"];
+        
+        if($filter_category != null){
+            $returned = $database->select(
+                "products",
+                [
+                    "[><]product_categories" => ["id_category" => "id"]
+                ],
+                "*",
+                [
+                    "product_categories.category" => $filter_category
+                ]
+            );
+        }else{
+            $returned = $database->select(
+                "products",
+                [
+                    "[><]product_categories" => ["id_category" => "id"]
+                ],
+                "*"
+            );
+        }
+
+        $error_info = $database->error;
+        if($error_info){
+            http_response_code(500);
+            $data["status"] = "error";
+            $data["message"] = "There was a server error";
+            $data["data"] = $error_info;
+        }
+        else{
+            http_response_code(200);
+            $data["status"] = "success";
+            $data["message"] = "The data was gathered successfully";
+            $data["data"] = $returned;
+        }
+        print_r(json_encode($data));
+    }, "get_all_products");
+
+    $router->map("GET", $entity."/api/article/categories", function() {
         global $database;
         $data;
 
         $returned = $database->select(
-            "products",
+            "article_categories",
             "*"
         );
 
@@ -66,7 +132,32 @@
             $data["data"] = $returned;
         }
         print_r(json_encode($data));
-    }, "get_all_products");
+    }, "get_all_article_categories");
+
+    $router->map("GET", $entity."/api/product/categories", function() {
+        global $database;
+        $data;
+
+        $returned = $database->select(
+            "product_categories",
+            "*"
+        );
+
+        $error_info = $database->error;
+        if($error_info){
+            http_response_code(500);
+            $data["status"] = "error";
+            $data["message"] = "There was a server error";
+            $data["data"] = $error_info;
+        }
+        else{
+            http_response_code(200);
+            $data["status"] = "success";
+            $data["message"] = "The data was gathered successfully";
+            $data["data"] = $returned;
+        }
+        print_r(json_encode($data));
+    }, "get_all_product_categories");
 
     $match = $router->match();
 
