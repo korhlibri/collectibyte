@@ -19,7 +19,8 @@
                             <div class="card-body bg-light">
                                 <h2 class="card-title">{{ product.title }}</h2>
                                 <p class="card-text">{{ product.description }}</p>
-                                <a href="#" class="btn btn-primary">Add to cart</a>
+                                <a @click="add_to_cart(product.id)" class="btn btn-primary">Add to cart</a>
+                                <i :id="product.id" class="align-middle h3 bi bi-check d-none"></i>
                             </div>
                         </div>
                     </div>
