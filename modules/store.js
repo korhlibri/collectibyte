@@ -47,7 +47,7 @@ let app = createApp({
                 });
             }
             parsed_cart[product_id] = temp_constructor;
-            console.log(JSON.stringify(parsed_cart));
+            // console.log(JSON.stringify(parsed_cart));
             localStorage.setItem("cart", btoa(JSON.stringify(parsed_cart)));
             
             document.getElementById(product_id).classList.add('d-inline');

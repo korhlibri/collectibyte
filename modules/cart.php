@@ -41,7 +41,7 @@
             <div class="row align-items-center ms-5 me-5 mt-3 mb-5">
                 <div class="col-md-6 col-12">
                     <h3>Subtotal: ${{ total.toFixed(2) }}</h3>
-                    <h3>Tax: %{{ tax * 100 }}</h3>
+                    <h3>Tax: {{ tax * 100 }}%</h3>
                     <h3>Total: ${{ (total + (total * tax)).toFixed(2) }}</h3>
                 </div>
                 <div class="col-md-6 col-12">

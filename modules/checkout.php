@@ -1,4 +1,4 @@
-<section class="mt-5 mb-5">
+<section id="vue-app-checkout" class="mt-5 mb-5">
     <div class="container text-light">
         <h1 class="mb-3">Payment Information</h1>
         <div class="row">
@@ -53,11 +53,8 @@
                 </div>
             </div>
             <div class="col-md-4 col-12">
-                <h3>Item1 x 5 ($2400)</h3>
-                <h3>Item1 x 5 ($2400)</h3>
-                <h3>Item1 x 5 ($2400)</h3>
-                <h3>Item1 x 5 ($2400)</h3>
-                <h3>Total ($2400)</h3>
+                <h5 v-for="item in cart">{{ item.title }} x {{ item.amount }} (${{ (item.amount * item.price).toFixed(2) }})</h5>
+                <h3 class="mt-3">Total (${{ (total + (total * tax)).toFixed(2) }}) (Incl. tax)</h3>
             </div>
         </div>
         <div class="row align-items-center ms-5 me-5 mt-5 mb-5">
@@ -70,3 +67,5 @@
             </div>
     </div>
 </section>
+
+<script src="<?php echo $ref;?>modules/checkout.js"></script>
