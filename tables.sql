@@ -18,15 +18,15 @@ CREATE TABLE collectibyte.articles(
     FOREIGN KEY (id_category) REFERENCES collectibyte.article_categories(id);
 ) COLLATE 'utf8_general_ci';
 
-CREATE TABLE collectibyte.article_details(
-    id int(9) NOT NULL AUTO_INCREMENT, 
-    id_article int(9) NOT NULL UNIQUE, 
-    article_text text NOT NULL,
-    creation_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, 
-    archived int(1) NOT NULL DEFAULT 0,
-    PRIMARY KEY (id),
-    FOREIGN KEY (id_article) REFERENCES collectibyte.articles(id)
-) COLLATE 'utf8_general_ci';
+-- CREATE TABLE collectibyte.article_details(
+--     id int(9) NOT NULL AUTO_INCREMENT, 
+--     id_article int(9) NOT NULL UNIQUE, 
+--     article_text text NOT NULL,
+--     creation_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+--     archived int(1) NOT NULL DEFAULT 0,
+--     PRIMARY KEY (id),
+--     FOREIGN KEY (id_article) REFERENCES collectibyte.articles(id)
+-- ) COLLATE 'utf8_general_ci';
 
 CREATE TABLE collectibyte.product_categories(
     id int(9) NOT NULL AUTO_INCREMENT,
