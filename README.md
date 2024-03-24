@@ -1,5 +1,5 @@
 # collectibyte
-A simple PHP project of an e-commerce website using Vue.js and Bootstrap 5.
+A simple partially functional PHP project of an e-commerce website using Vue.js and Bootstrap 5.
 
 ## Set-up
 
