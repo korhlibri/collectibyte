@@ -51,3 +51,5 @@
         </div>
     </div>
 </section>
+
+<script src="<?php echo $ref;?>modules/cart.js"></script>
