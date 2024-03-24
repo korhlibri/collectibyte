@@ -31,7 +31,7 @@
                                 <h5>${{ (item.price * item.amount).toFixed(2) }}</h5>
                             </td>
                             <td>
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-trash-fill"></i></i>
+                                <button type="submit" class="btn btn-primary" @click="remove_from_cart(key)"><i class="bi bi-trash-fill"></i></i>
                                 </button>
                             </td>
                         </tr>

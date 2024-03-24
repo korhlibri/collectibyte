@@ -20,7 +20,6 @@ let app = createApp({
                 response = await axios.get("api/products", { params: { "category": category } });
             }
             this.products = response.data.data;
-            console.log(this.products);
         },
         get_all_categories: async function(){
             let response = await axios.get("api/product/categories");
@@ -47,7 +46,6 @@ let app = createApp({
                 });
             }
             parsed_cart[product_id] = temp_constructor;
-            // console.log(JSON.stringify(parsed_cart));
             localStorage.setItem("cart", btoa(JSON.stringify(parsed_cart)));
             
             document.getElementById(product_id).classList.add('d-inline');

@@ -32,5 +32,13 @@ let app = createApp({
 
             this.retrieve_cart();
         },
+        remove_from_cart: async function(product_id){
+            let unparsed_cart = localStorage.getItem("cart");
+            let parsed_cart = unparsed_cart ? JSON.parse(atob(unparsed_cart)) : {};
+            delete parsed_cart[product_id];
+            localStorage.setItem("cart", btoa(JSON.stringify(parsed_cart)));
+
+            this.retrieve_cart();
+        },
     },
 }).mount('#vue-app-cart');
