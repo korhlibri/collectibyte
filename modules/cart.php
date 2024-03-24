@@ -13,7 +13,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr v-for="item in cart">
                             <td>
                                 <h5>Product1</h5>
                             </td>
