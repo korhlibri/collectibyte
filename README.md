@@ -1,5 +1,5 @@
 # collectibyte
-A simple PHP project of an e-commerce website using Vue.js and Bootstrap 5.
+A simple partially functional PHP project of an e-commerce website using Vue.js and Bootstrap 5.
 
 ## Set-up
 
@@ -19,7 +19,7 @@ The project requires certain SQL tables to function properly. These tables are a
 
 The project uses data in the SQL tables generated with the help of `tables.sql` in order to display meaningful information and allow interactivity of the data entries on the website.
 
-### Change API database settings
+### Change API Database Settings
 
 The configuration of the database is needed for the project to function properly. The configuration is located in `/api/index.php` and is used by the API to access the database with provided credentials.
 
