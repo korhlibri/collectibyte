@@ -27,14 +27,14 @@ let app = createApp({
             this.categories = response.data.data;
         },
         add_to_cart: async function(product_id){
-            let current_cart = localStorage.getItem("cart");
-            let cart = current_cart ? JSON.parse(atob(current_cart)) : {};
+            let unprased_cart = localStorage.getItem("cart");
+            let parsed_cart = unprased_cart ? JSON.parse(atob(unprased_cart)) : {};
             let temp_constructor;
-            if(cart[product_id]){
+            if(parsed_cart[product_id]){
                 temp_constructor = {
-                    ...cart[product_id]
+                    ...parsed_cart[product_id]
                 }
-                temp_constructor["amount"] += 1;
+                temp_constructor["amount"] = parseInt(temp_constructor["amount"], 10)+ 1;
             }else{
                 this.products.forEach(function (product){
                     if(product["id"] == product_id){
@@ -46,9 +46,9 @@ let app = createApp({
                     }
                 });
             }
-            cart[product_id] = temp_constructor;
-            console.log(JSON.stringify(cart));
-            localStorage.setItem("cart", btoa(JSON.stringify(cart)));
+            parsed_cart[product_id] = temp_constructor;
+            console.log(JSON.stringify(parsed_cart));
+            localStorage.setItem("cart", btoa(JSON.stringify(parsed_cart)));
             
             document.getElementById(product_id).classList.add('d-inline');
             document.getElementById(product_id).classList.remove('d-none');

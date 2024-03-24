@@ -27,7 +27,6 @@
         $returned;
 
         $filter_category = $_REQUEST["category"];
-        $product = $_REQUEST["product"];
 
         if($filter_category){
             $returned = $database->select(
